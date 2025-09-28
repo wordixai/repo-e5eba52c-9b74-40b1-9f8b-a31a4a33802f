@@ -61,6 +61,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				wedding: {
+					'rose-gold': 'hsl(var(--rose-gold))',
+					'champagne': 'hsl(var(--champagne))',
+					'blush': 'hsl(var(--blush))',
+					'sage': 'hsl(var(--sage))',
+					'dusty-rose': 'hsl(var(--dusty-rose))'
 				}
 			},
 			borderRadius: {

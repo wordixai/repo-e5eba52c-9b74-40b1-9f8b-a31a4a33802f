@@ -2,17 +2,119 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-The @apply directive should not be used with the group utility class.
-*/
-
 @layer base {
   :root {
-   
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --primary: 340 82% 52%;
+    --primary-foreground: 355 100% 97%;
+    --secondary: 60 4.8% 95.9%;
+    --secondary-foreground: 24 9.8% 10%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 60 9.1% 97.8%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 340 82% 52%;
+    --radius: 0.5rem;
+
+    /* Wedding theme colors */
+    --rose-gold: 20 14% 85%;
+    --champagne: 45 28% 89%;
+    --blush: 350 100% 96%;
+    --sage: 82 39% 85%;
+    --dusty-rose: 340 32% 78%;
   }
 
-  .dark {
+  * {
+    border-color: hsl(var(--border));
+  }
 
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .wedding-gradient {
+    background: linear-gradient(135deg, hsl(350 100% 96%) 0%, hsl(45 28% 89%) 50%, hsl(340 32% 78%) 100%);
+  }
+
+  .rose-gold-text {
+    background: linear-gradient(135deg, #d4a574 0%, #c9956b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .floating {
+    animation: floating 6s ease-in-out infinite;
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .fade-in-up-delay-1 {
+    animation: fadeInUp 1s ease-out 0.3s forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .fade-in-up-delay-2 {
+    animation: fadeInUp 1s ease-out 0.6s forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .fade-in-up-delay-3 {
+    animation: fadeInUp 1s ease-out 0.9s forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes floating {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  @keyframes sparkle {
+    0%, 100% { opacity: 0; transform: scale(0); }
+    50% { opacity: 1; transform: scale(1); }
+  }
+
+  .sparkle {
+    animation: sparkle 2s infinite;
+  }
+
+  .elegant-script {
+    font-family: 'Brush Script MT', cursive;
   }
 }
